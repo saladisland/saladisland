@@ -352,4 +352,107 @@ h3{
     font-size:13px;
     color:rgb(90, 88, 88);
     margin-bottom:0;
+
   }
+/* ================================== */
+/* === INI JURUS RESPONSIVE-NYA === */
+/* (Taruh ini di PALING BAWAH file Tugas3.css) */
+/* ================================== */
+
+@media (max-width: 700px) {
+
+    /* --- 1. Header & Navigasi --- */
+    .text-box h1 {
+        font-size: 32px; /* Judulnya dikecilin, 62px kegedean di HP */
+    }
+
+    /* Menu navigasi kita rombak */
+    .nav-links ul li {
+        display: block; /* Link-nya kita bikin susun ke bawah */
+        padding: 10px 0; /* Kasih jarak atas-bawah */
+    }
+    
+    .nav-links {
+        /* Ini adalah solusi SEMENTARA.
+         Idealnya, ini jadi "Menu Hamburger" (ikon 3 garis), tapi itu butuh 
+         trik CSS/JavaScript lagi. Untuk sekarang, kita sembunyikan aja 
+         biar rapi. Kalau mau ditampilin, hapus baris di bawah ini.
+        */
+        display: none; 
+    }
+    
+    nav {
+        flex-direction: column; /* Logo di atas, nav di bawah */
+        align-items: center;  /* Logo-nya ke tengah */
+    }
+    nav img {
+        width: 130px; /* Kecilin dikit logonya */
+    }
+
+
+    /* --- 2. Section "Keunggulan" & "Jobdesk" (yang 3 kolom) --- */
+    .row {
+        flex-direction: column; /* JURUS SAKTI: Yang tadinya nyamping, jadi susun ke bawah */
+    }
+
+    /* Bikin semua kolom jadi full-width */
+    .keunggulan-jastul,
+    .jobdesk-jastul {
+        flex-basis: 100%; /* Tadinya 31-32%, sekarang 100% */
+        margin-bottom: 20px; /* Kasih jarak */
+    }
+    
+    /* --- 3. Section "Harga" (yang ada float) --- */
+    .harga {
+        width: 90%; /* Lebarin dikit areanya */
+        padding-top: 10px;
+    }
+    .harga img {
+        float: none; /* Stop pakai float, ini bikin berantakan di HP */
+        display: block; /* Jadiin block */
+        width: 80%; /* Jangan kegedean */
+        margin: 20px auto; /* Bikin ke tengah */
+    }
+    .harga, .harga-jastul {
+        text-align: center; /* Teksnya ke tengahin aja biar rapi */
+    }
+    
+    /* --- 4. Section "Order" (yang 2 kolom) --- */
+    .order {
+        width: 90%; /* Lebarin dikit */
+    }
+    .order-jastul {
+        flex-basis: 100%; /* Tadinya 44%, sekarang 100% */
+        margin-bottom: 20px;
+        flex-direction: column; /* Susun ke bawah ikon dan teksnya */
+        align-items: center; /* Bikin ke tengah */
+        text-align: center; /* Teksnya juga ke tengah */
+    }
+    .order-jastul img {
+        margin: 0 0 15px 0; /* Ikonnya pindah ke atas teks */
+    }
+    .order-jastul h3 {
+        text-align: center;
+    }
+
+
+    /* --- 5. Section "Instagram" --- */
+    .instagram {
+        width: 90%;
+        padding: 40px 20px; /* Padding-nya kecilin, jangan 100px */
+        text-align: center; /* Teks ke tengah */
+        background-position: center; /* Biar gambarnya pas */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .instagram h1 {
+        font-size: 24px; /* Judulnya kecilin dikit */
+    }
+
+    /* --- 6. Footer --- */
+    .footer-basic li {
+        display: block; /* Link di footer susun ke bawah juga */
+        padding: 5px 10px;
+    }
+}
